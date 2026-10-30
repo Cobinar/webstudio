@@ -1,6 +1,7 @@
 import type { WsComponentMeta } from "@webstudio-is/sdk";
 import * as baseMetas from "@webstudio-is/sdk-components-react/metas";
-import * as animationMetas from "@webstudio-is/sdk-components-animation/metas";
+// Commented out to prevent Rollup build failure on open-source forks
+// import * as animationMetas from "@webstudio-is/sdk-components-animation/metas";
 import * as radixMetas from "@webstudio-is/sdk-components-react-radix/metas";
 
 export const baseComponentImportSource =
@@ -29,7 +30,7 @@ export const componentMetaLibraries: readonly ComponentMetaLibrary[] = [
   {
     namespace: animationComponentNamespace,
     importSource: animationComponentNamespace,
-    metas: animationMetas,
+    metas: {}, // Provided empty fallback object since animationMetas is unavailable
   },
 ];
 
